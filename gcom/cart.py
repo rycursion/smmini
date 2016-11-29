@@ -5,11 +5,13 @@ class Cart:
 		self.lst.append(p_id)
 	def remove(self, p_id):
 		self.lst.remove(p_id)
-	def empty(self):
+	def if_empty(self):
 		if len(self.lst)==0:
 			return True
 		else:
 			return False
+	def empty_cart(self):
+		self.lst=[]
 
 c=""
 
