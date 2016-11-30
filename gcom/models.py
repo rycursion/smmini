@@ -5,7 +5,7 @@ class Product(models.Model):
 	name=models.CharField(max_length=50)
 	price=models.FloatField(null=True, blank=True, default=0)
 	rating=models.FloatField(null=True, blank=True, default=0)
-	description=models.TextField(max_length=200)
+	description=models.TextField()
 	genre=models.CharField(max_length=10)
 	images=models.ImageField(upload_to='siteimages/')
 
