@@ -16,7 +16,7 @@ def list(request):
 		product_dictionary[i.genre].append(i.id)
 	return render(request, "gcom/list.html", {"p_dict" : product_dictionary, "p_list" : product_list})
 
-def product(request, product_id, y_n):
+def product(request, product_id, y_n=0):
 	product = get_object_or_404(Product, pk=product_id)
 	if y_n==0:
 		return render(request, "gcom/productpage.html", {"product": product})
