@@ -1,11 +1,13 @@
+{% load staticfiles %}
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="./material.min.css">
-<link rel="stylesheet" type="text/css" href="anm.css" />
+<link rel="stylesheet" href="{% static 'listcss/material.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'listcss/anm.css' %}" />
 <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css" />
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Audiowide" />
-<script src="./material.min.js"></script>
+<script src="{% static 'listcss/material.min.js' %}"></script>
+
 <style>
 div.img {
     margin: 5px;
@@ -40,7 +42,7 @@ body{
 
 
 
-<title>LIST</title>
+<title>List</title>
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -67,8 +69,8 @@ body{
 			<ul>
 			{% for prod in p_list %}
 				<li><div class="img">
-				  <a target="_blank" href="{% url 'gcom:product' product.id 0 %}">
-				  <img src={{prod.images}} alt="Fjords" width="320" height="450">
+				  <a target="_blank" href="{% url 'gcom:product' prod.id %}">
+				  <img src="/static/listcss/{{prod.id}}.jpg" alt="Fjords" width="320" height="450">
 				  </a>
 				  <div class="desc">{{prod.name}}</div>
 			</div></li>

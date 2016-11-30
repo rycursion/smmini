@@ -12,6 +12,5 @@ urlpatterns = [
         url(r'^contact/$', views.contact, name="contact"),
         url(r'^cart/$', views.cart, name='cart'),
         url(r'^u_cart/(?P<product_id>[0-9]+)$', views.u_cart, name="u_cart"),
-        url(r'^contact/$', views.contact, name='contact'),
 ]
 
