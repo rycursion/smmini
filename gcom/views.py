@@ -19,10 +19,10 @@ def list(request):
 def product(request, product_id, y_n=0):
 	product = get_object_or_404(Product, pk=product_id)
 	if y_n==0:
-		return render(request, "gcom/productpage.html", {"product": product})
+		return render(request, "gcom/gamepage.html", {"product": product})
 	else:
 		cart.c.add(product.id)
-		return render(request, "gcom/productpage.html", {"product": product})
+		return render(request, "gcom/gamepage.html", {"product": product})
 
 def cart(request):
 	product_list = cart.c.lst
