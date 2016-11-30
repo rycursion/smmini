@@ -21,9 +21,5 @@ app_name='gcom'
 
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	url(r'^$', views.home, name="home"),
-	url(r'^list/$', views.list, name="list"),
-	url(r'^(?P<product_id>[0-9]+)/(?P<y_n>[0-9]+)$', views.product, name="product"),
-	url(r'^contact/$', views.contact, name="contact"),
-	url(r'^u_cart/(?P<product_id>[0-9]+)$', views.u_cart, name="u_cart"),
+	url(r'^gcom/', include('gcom.urls')),
 ]

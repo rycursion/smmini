@@ -139,6 +139,7 @@ body {
   background: url('./black.jpg');
 -moz-background-size: cover;
 -webkit-background-size: cover;
+overflow: hidden;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;

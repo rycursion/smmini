@@ -49,9 +49,9 @@ body{
 	<div class="mdl-layout__drawer">
     
  		<nav class="mdl-navigation">
-		  <a class="mdl-navigation__link" href="home.htm">Home</a>
-		  <a class="mdl-navigation__link" href="list.htm">List Of Games</a>
-		  <a class="mdl-navigation__link" href="contact.htm">Contact</a>
+		  <a class="mdl-navigation__link" href="home">Home</a>
+		  <a class="mdl-navigation__link" href="list">List Of Games</a>
+		  <a class="mdl-navigation__link" href="contact">Contact</a>
 	 	</nav>
 	</div>
 <h1><center>List of Games</center></h1>
@@ -64,7 +64,15 @@ body{
 			<br>
 			<h2>Here are the available games:</h2>
 			<br>
-			<ul id="itemsToFilter">
+			<ul>
+			{% for prod in p_list %}
+				<li><div class="img">
+				  <a target="_blank" href="{% url 'gcom:product' product.id 0 %}">
+				  <img src={{prod.images}} alt="Fjords" width="320" height="450">
+				  </a>
+				  <div class="desc">{{prod.name}}</div>
+			</div></li>
+			{% endfor %}</ul>
 <li data-type="ACTION">
 			<div class="img">
 				  <a target="_blank" href="">

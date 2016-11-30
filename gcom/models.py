@@ -7,7 +7,6 @@ class Product(models.Model):
 	rating=models.FloatField(null=True, blank=True, default=0)
 	description=models.TextField()
 	genre=models.CharField(max_length=10)
-	images=models.ImageField(upload_to='siteimages/')
 
 	def __str__(self):
 		return self.name

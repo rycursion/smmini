@@ -10,10 +10,10 @@ def home(request):
 	return render(request, 'gcom/home.html')
 
 def list(request):
-	product_list = list(Product.objects.order_by('ID').asc())
-	product_dictionary = {"action":[],"sports":[],"strategy":[]}
+	product_list = Product.objects.order_by('-id')
+	product_dictionary = {"Action":[],"Sports":[],"Strategy":[]}
 	for i in product_list:
-		product_dictionary[i.genre].append(i.ID)
+		product_dictionary[i.genre].append(i.id)
 	return render(request, "gcom/list.html", {"p_dict" : product_dictionary, "p_list" : product_list})
 
 def product(request, product_id, y_n):
@@ -21,7 +21,7 @@ def product(request, product_id, y_n):
 	if y_n==0:
 		return render(request, "gcom/productpage.html", {"product": product})
 	else:
-		cart.c.add(product.ID)
+		cart.c.add(product.id)
 		return render(request, "gcom/productpage.html", {"product": product})
 
 def cart(request):
@@ -32,14 +32,18 @@ def cart(request):
 
 def u_cart(request, product_id):
 	if product_id!=0:
-		cart.c.remove(product_id)
-		product_list = cart.c.lst
+		c.remove(product_id)
+		product_list = c.lst
 		for i in range(len(product_list)):
 			p_list = get_object_or_404(Product, pk=product_list[i])
 		return render(request, "gcom/cartpage.html", {"p_list" : p_list})
 	else:
-		cart.c.empty_cart()
+		c.empty_cart()
 		return render(request, "gcom/home.html")
 
 def contact(request):
-	return render(request, "gcom/contactpage.html")
+    form_class = ContactForm
+    
+    return render(request, 'contact.html', {
+        'form': form_class,
+    })
