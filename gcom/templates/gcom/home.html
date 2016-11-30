@@ -1,13 +1,67 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
-	<title>Gamemart</title>
-</head>
-<body>
-<h2>&quot;Gamers don't die, they respawn.</h2>
-<div>
-	<h3><a href="">Crysis 3</a></h3>
-</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+<script src=" {% static 'css/material.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-deep_orange.min.css" />
+
+
+<title>Homepage</title>
+</head>
+<body background="black.jpg">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+  </header>
+
+  <div class="mdl-layout__drawer">
+    
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="home.htm">Home</a>
+      <a class="mdl-navigation__link" href="list.htm">List Of Games</a>
+      <a class="mdl-navigation__link" href="contact.htm">Contact</a>
+    </nav>
+  </div>
+
+
+
+<main class="mdl-layout__content">
+<div class="page-content">
+<br>
+<font face="lobster" color="orange" size=12px><center><i>"Gamers Don't Die, They Respawn.."</i></center></font>
+<div id="container">
+    <header>
+	    <b><center><FONT face="garamond" color='white' size=20px>Games available</FONT></center></b>
+    </header>
+    <br>
+    <div class="photobanner">
+    	<img class="first" src="image-1.jpg" alt="" />
+    	<img src="/../gcom/static/css/siteimages/1.jpeg" alt="" height="750px" />
+    	<img src="/../gcom/static/css/siteimages/2.jpeg" alt="" height="750px"/>
+    	<img src="/../gcom/static/css/siteimages/3.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/5.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/7.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/9.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/10.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/13.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/14.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/15.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/16.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/17.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/18.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/19.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/20.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/21.jpeg" alt="" height="750px"/>
+    	<img src="gcom/static/css/siteimages/22.jpeg" alt="" height="750px"/>
+
+
+    </div>
+</div><center><a href='list.htm'>
+<button class="button" style="vertical-align:middle"><span>Lets Buy</span></button></a>
+</center>
+ </main>
+</div>
 </body>
 </html>

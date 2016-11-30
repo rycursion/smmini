@@ -6,6 +6,7 @@ from . import cart
 from .models import Product
 
 def home(request):
+	games=Product.objects.order_by('id')
 	return render(request, 'gcom/home.html')
 
 def list(request):
