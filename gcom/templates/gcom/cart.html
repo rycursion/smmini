@@ -1,14 +1,15 @@
+{% load staticfiles %}
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Audiowide" />
 
-<script src="./material.min.js">
-</script>
-<link rel="stylesheet" href="./material.min.css">
+<script src="{% static 'listcss/material.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'listcss/material.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'listcss/material.css' %}">
 
-<link rel="stylesheet" href="./cart.css">
+<link rel="stylesheet" href="{% static 'listcss/cart.css%}">
 
 <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-orange.min.css" />
 <style>
@@ -51,18 +52,18 @@ div.desc {
 	<div class="mdl-layout__drawer">
     
  		<nav class="mdl-navigation">
-		  <a class="mdl-navigation__link" href="home.htm">Home</a>
-		  <a class="mdl-navigation__link" href="list.htm">List Of Games</a>
-		  <a class="mdl-navigation__link" href="contact.htm">Contact</a>
-		  <a class="mdl-navigation__link" href="cart.html">Cart</a>
+		  <a class="mdl-navigation__link" href="./home">Home</a>
+		  <a class="mdl-navigation__link" href="./list">List Of Games</a>
+		  <a class="mdl-navigation__link" href="./contact">Contact</a>
+		  <a class="mdl-navigation__link" href="./cart">Cart</a>
 	 	</nav>
 	</div>
 	<div style="width: 100%;overflow:auto;">
 	   <div style="float:left; margin-left: 90px">
   		<div class=".content_1">
-			<h1 style="margin-left: 0px"><b><center>Your Order In a nutshell</center></b></h1>
+			<h1 style="margin-left: 0px"><b><center>Your Order In A Nutshell</center></b></h1>
 			<br>
-			<h2 style="margin-left: 0px"><center>Here are the games you choose</center></h2>
+			<h2 style="margin-left: 0px"><center>Your Games</center></h2>
 			<br>
 			<div class="img">
 				  <img src="1.jpeg" alt="Fjords" width="320" height="450">

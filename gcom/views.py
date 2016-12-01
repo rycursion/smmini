@@ -7,10 +7,10 @@ from .models import Product
 
 def home(request):
 	try:
-		cart.a.lst.append(0)
+		cart.c.lst.append(0)
 		cart.c.lst.remove(0)
 	except:
-		cart.c.create()
+		cart.create()
 	games=Product.objects.order_by('id')
 	return render(request, 'gcom/home.html')
 
@@ -29,7 +29,7 @@ def product(request, product_id, y_n=0):
 		cart.c.add(product.id)
 		return render(request, "gcom/gamepage.html", {"product": product})
 
-def cart(request):
+def xcart(request):
 	product_list = cart.c.lst
 	for i in range(len(product_list)):
 		p_list = get_object_or_404(Product, pk=product_list[i])
